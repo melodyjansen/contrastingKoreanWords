@@ -5,6 +5,7 @@ class KoreanSimilarity(object):
     def __init__(self):
         pass
 
+    # similarity algorithm
     def calculate_similarity(self, word1, word2):
         word1 = self.transform(word1)
         word2 = self.transform(word2)
