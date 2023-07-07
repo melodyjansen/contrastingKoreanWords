@@ -8,6 +8,7 @@ class Cluster(object):
         self.size = len(words)
         self.sim_matrix = sim_matrix
 
+    # compute overall within-cluster similarity
     def compute_avg_similarity(self):
         similarities = []
         for i in range(self.size):
@@ -21,6 +22,7 @@ class Cluster(object):
         avg_similarity = sum(similarities) / len(similarities)
         return avg_similarity
 
+    # check is clusters consists of exactly 5 words
     def is_valid(self):
         return len(set(self.words)) == 5
 
